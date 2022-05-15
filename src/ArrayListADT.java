@@ -9,4 +9,8 @@ public interface ArrayListADT<T> {
 	public void addRear(T element);
 	public T get(int index) throws Exception;
 	public T remove();
+	public int getSize();
+	public int getRear();
+	public int getFront();
+	public int getCapacity();
 }
