@@ -3,8 +3,6 @@ import java.util.List;
 
 /**
  * 
- * @author Juan Dominguez
- * @author Qiyue Wang
  *
  * @param <K> The type of the keys in this DefaultMap
  * @param <V> The type of the values in this DefaultMap
