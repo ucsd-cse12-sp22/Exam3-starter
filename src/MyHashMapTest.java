@@ -22,10 +22,8 @@ public class MyHashMapTest {
 		// You don't have to use array list 
 		// This test will work with any object that implements List
 		filereader.createHeap();
-		assertEquals(94.0, filereader.getMaxOfSection('A').marks, 0.05);
-		assertEquals(88.0, filereader.getMaxOfSection('B').marks, 0.05);
-		assertEquals(70.0, filereader.getMaxOfSection('C').marks, 0.05);
-		assertEquals(null, filereader.getMaxOfSection('D'));
+		
+		//Write testcase for checking max score of 2 sections
 	}
 	
 	/* Add more of your tests below */
