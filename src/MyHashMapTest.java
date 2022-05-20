@@ -17,15 +17,8 @@ public class MyHashMapTest {
 	}
 
 
-	@Test
-	public void test_getMaxScoreinput() {
-		// You don't have to use array list 
-		// This test will work with any object that implements List
-		filereader.createHeap();
-		
-		//Write testcase for checking max score of 2 sections
-	}
-	
-	/* Add more of your tests below */
+
+	//Write testcase for checking max score of 2 sections
+
 	
 }
