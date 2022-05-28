@@ -21,7 +21,6 @@ public interface DefaultMap<K, V> {
 
 	/**
 	 * Adds the specified key, value pair to this DefaultMap
-	 * Note: duplicate keys are not allowed
 	 * 
 	 * @return true if the key value pair was added to this DefaultMap
 	 * @throws IllegalArgument exception if the key is null
