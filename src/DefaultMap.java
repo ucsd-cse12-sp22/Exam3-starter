@@ -1,12 +1,6 @@
 import java.util.Comparator;
 import java.util.List;
 
-/**
- * 
- *
- * @param <K> The type of the keys in this DefaultMap
- * @param <V> The type of the values in this DefaultMap
- */
 public interface DefaultMap<K, V> {
 	public static final Comparator myComparator = null;
 	
