@@ -8,20 +8,37 @@ public class FileReader {
 	
 	String filename;
 	Comparator comparator;
-	DefaultMap<Character, Student> hashMap;
+	DefaultMap<Integer, Product> hashMap;
 	
 	public FileReader(String name) {
-		// Constructor for the filereader
+		this.filename = name;
+		this.comparator =  (Comparator) new Comparator<Node<Integer,Product>>(){
+			@Override
+			public int compare(Node<Integer, Product> o1, Node<Integer, Product> o2) {
+				//write method to return 1/-1 based on comparision
+			}
+        };
+        this.hashMap = //initialize a constructor
 	}
 	
 	public void createHeap() {
-        //Method to read input.txt using FileInputStream and putting the student entries to the hashMap
+            try {
+            	InputStream f = new FileInputStream(this.filename);
+            	Scanner sc = new Scanner(f);
+            	while (sc.hasNextLine()) {
+                	//read and put entries in the hashMap 
+            	}
+            	sc.close();
+             } catch (FileNotFoundException e) {
+            		System.out.println(e);
+             }
 	}
 	
-	public Student getMaxOfSection(char section) {
-		//Method that returns a maximum scoring student's record given the section
+	public Product getMinPriceOfCategory(Integer category) {
+		//use get method to get the min value of category (it is same as the minimum value of bucket)
 	}
 	
 
 
 }
+
