@@ -1,105 +1,74 @@
 
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.Comparator;
+public class MaxHeap<K, V> {
 
-public class MyHashMap<K extends Comparable<? super K>, V> implements DefaultMap<K, V> {
-    public static final int DEFAULT_INITIAL_CAPACITY = 16;
-    public static final String ILLEGAL_ARG_CAPACITY = 
-                                        "Initial Capacity must be non-negative";
-    public static final String ILLEGAL_ARG_LOAD_FACTOR = 
-                                        "Load Factor must be positive";
-    public static final String ILLEGAL_ARG_NULL_KEY = "Keys must be non-null";
+List<HeapEntry<K,V>> entries;
+int capacity;
+int heapSize = 0;
+Comparator comparator;
 
-    private int capacity;
-    private int size;	
-    private Comparator myComparator;
-    private Character[] sections;
+    public MaxHeap(int capacity, Comparator comparator){
+        this.capacity = capacity;
 
-    private List<BST<K, V>> buckets;
-
-    public MyHashMap() {
-        this(DEFAULT_INITIAL_CAPACITY, null);}
-
-    @SuppressWarnings("unchecked")
-        public MyHashMap(int initialCapacity, Comparator myComparator)
-            throws IllegalArgumentException {
-           // Constructor for the hash map
-        }
-
-    @Override
-        public boolean put(K key, V value) throws IllegalArgumentException {
-		// Method to put key value pair in the hash map
-        }
-
-
-    @Override
-        public V get(K key) throws IllegalArgumentException {
-		//Method that returns the minimum value in the bucket of given key
-        }
-
-    @Override
-        public boolean containsKey(K key) throws IllegalArgumentException {
-            //Method to check if the key is present in the hash map
-        }
-
-    @Override
-        public int size() {
-            //Method to get the size of the hash map
-        }
-
-    @Override
-        public boolean isEmpty() {
-            //Method to check if the hash map is empty
-        }
-        
+        this.entries =  new ArrayList<HeapEntry<K, V>>(capacity);
+        this.comparator = comparator;
+        heapSize=0;
+       
     }
 
-    protected static class HashMapEntry<K, V> implements DefaultMap.Entry<K, V> {
+	public void add(K key, V value){
 
-        K key;
-        V value;
+	}
 
-        public HashMapEntry(K key, V value) {
-            this.key = key;
-            this.value = value;
-        }
-
-        @Override
-            public K getKey() {
-                return this.key;
-            }
-
-        @Override
-            public V getValue() {
-                return this.value;
-            }
-
-        @Override
-            public void setValue(V value) {
-                this.value = value;
-            }
-
-        @Override
-            @SuppressWarnings("unchecked")
-            public boolean equals(Object o) {
-                if (o instanceof MyHashMap.HashMapEntry<?, ?>) {
-                    HashMapEntry<K, V> other = null;
-                    try {
-                        other = (HashMapEntry<K, V>) o;
-                    } catch (ClassCastException e) {
-                        return false;
-                    }
-
-                    return Objects.equals(key, other.key);
-                }
-
-
-                return false;
-            }
-
-    }
+	
+	public int parent(int i)
+	{
+	   
+	}
+	 
+	
+	public boolean isEmpty() {
+	
+	}
+	
+	public HeapEntry<K,V> peek() {
+		    
+	}
+	
+	public HeapEntry<K,V> remove() {
+		
+	}
+	
+	
+	int left(int index){
+		
+	}
+	
+	int right(int index){
+		
+	}
+	
 }
 
+class HeapEntry<K, V> implements DefaultMap.Entry<K,V>{
+	K key;
+	V value;
+
+	HeapEntry(K key, V value){
+		this.key = key;
+		this.value = value;
+	}
+
+	public K getKey() {
+		return key;
+	}
+	
+	public V getValue() {
+		return value;
+	}
+
+	public void setValue(V value){
+		this.value = value;
+	}
+}
