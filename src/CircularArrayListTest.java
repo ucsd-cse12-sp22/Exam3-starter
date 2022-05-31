@@ -7,8 +7,8 @@ public class CircularArrayListTest {
 	@Test
 	public void test_baseCase() throws Exception {
 
-		ArrayListADT<Integer> cal = new CircularArrayList<Integer> (10);
-		//Complete testcase to check elements at few positions
+		CircularArrayList<<Integer> cal = new CircularArrayList<Integer> (10);
+		//Complete testcase to check the transformed iterator using a circular arraylist
 	}
 	
 }
